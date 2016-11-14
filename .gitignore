@@ -1,0 +1,9 @@
+# Object files
+*.gmx
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+
+# Executables
+*.exe
+*.win
