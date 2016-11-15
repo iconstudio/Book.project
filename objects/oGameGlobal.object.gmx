@@ -26,7 +26,7 @@
           <argument>
             <kind>1</kind>
             <string>
-//event_user(0);
+event_user(0);
 
 </string>
           </argument>
@@ -51,15 +51,15 @@
           <argument>
             <kind>1</kind>
             <string>
-//if (ds_exists(ds_type_priority, TURN_PRIORITY_LIST_COPY))
-// ds_priority_destroy(TURN_PRIORITY_LIST_COPY);
+if (player_saved_get_numer() &gt; PLAYER_SAVEDLOADED_INDEX)
+ player_saved_branch_create(PLAYER_SAVEDLOADED_INDEX, true, true, true, true, true);
+else
+ game_branch_create_new(PLAYER_SAVEDLOADED_INDEX);
 
-//if (ds_exists(ds_type_priority, TURN_PRIORITY_LIST))
-// ds_priority_destroy(TURN_PRIORITY_LIST);
-
-game_begin();
-
-player_saved_branch_create(PLAYER_SAVEDLOADED_INDEX, true, true, true, true, true);
+var player = instance_find(oPlayer, 1);
+//ds_priority_add(TURN_PRIORITY_LIST, player, 1);
+TURN_CURRENT = player;
+global.turn_playerexcept = true;
 
 </string>
           </argument>
@@ -100,7 +100,6 @@ var gsy = VIEW_DY + 300;
 draw_text(gsx, gsy, "TURN: #" + string(TURN));
 //gsy += 50;
 //draw_text(gsx, gsy, "TURN (REAL): #" + string(TURN_REAL));
-
 
 draw_set_font(fontGlobal);
 
