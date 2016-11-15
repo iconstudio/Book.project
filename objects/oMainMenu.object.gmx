@@ -107,6 +107,7 @@ with (menu_main_create(oUIMainFrame)) { // 3 (Game Help)
    color = $6f3e20;
 
    scroll = 0;
+   scrollmax = 80;
    helplabel_id = id;
   }
  }
@@ -117,7 +118,7 @@ with (menu_main_create(oUIMainFrame)) { // 3 (Game Help)
 
   caption = "1.개요";
 
-  callback = -1;
+  callback = ui_callback_help_first;
   target = helplabel_id;
  }
 
@@ -127,7 +128,7 @@ with (menu_main_create(oUIMainFrame)) { // 3 (Game Help)
 
   caption = "2.인터페이스";
 
-  callback = -1;
+  callback = ui_callback_help_second;
   target = helplabel_id;
  }
 
@@ -137,7 +138,7 @@ with (menu_main_create(oUIMainFrame)) { // 3 (Game Help)
 
   caption = "3.조작법";
 
-  callback = -1;
+  callback = ui_callback_help_third;
   target = helplabel_id;
  }
 
