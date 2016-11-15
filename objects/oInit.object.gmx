@@ -28,7 +28,7 @@
             <string>
 //math_set_epsilon(0.002);
 
-for (var i = room_first; room_exists(i); i = room_next(i)) {
+for (var i = room_first; i != room_last &amp;&amp; room_exists(i); i = room_next(i)) {
  room_set_view_enabled(i, true);
  room_set_view(i, 0, true, 0, 0, VIEW_DW, VIEW_DH, 0, 0, VIEW_DW, VIEW_DH, VIEW_DW / 2, VIEW_DH / 2, 0, 0, -1);
 }

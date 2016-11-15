@@ -31,6 +31,8 @@ event_inherited();
 entity_verify(entity_get_index("Player"));
 entity_set_speed(15);
 
+event_user(2);
+
 </string>
           </argument>
         </arguments>
@@ -73,8 +75,11 @@ if (KEY_MODE == KEY_MODE_NORMAL) {
  }
 }
 
-if (turn_process_end)
+if (turn_process_end) {
+ event_user(2);
+
  event_user(14);
+}
 
 </string>
           </argument>
@@ -100,6 +105,31 @@ if (turn_process_end)
             <kind>1</kind>
             <string>
 game_turn_end_player();
+
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="7" enumb="12">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>
+game_view_set(x + 8, y + 8);
 
 </string>
           </argument>
