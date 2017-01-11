@@ -28,7 +28,7 @@
             <string>
 branch_datamap = ds_map_create();
 branch_wall = -1;     // 2d array[index, data...]
-branch_instance = -1; // 2d array[index(oDB of each instance)]
+branch_entity = -1; // 2d array[index(oDB of each instance)]
 // when save branch data, all instances will ds_map_write and save it to branch_instance.
 // branch_instance will be stored in branch_datamap
 branch_instance = -1; // 2d array[index]
