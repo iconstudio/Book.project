@@ -37,7 +37,7 @@ branch_cloud = -1;    // 2d array[index]
 branch_effect = -1;   // 2d array[index]
 
 // for debug
-// the process of creating each instance is only map-dependent.
+// the process of creating each instance is on only map-dependent.
 // this is values that prevent game from creating too many instances.
 int_WallCount = 0;
 int_InstanceCount = 0;
