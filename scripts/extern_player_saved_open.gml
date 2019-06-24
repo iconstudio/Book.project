@@ -5,8 +5,8 @@ if (argument1 <= argument0 || argument1 >= PLAYER_SAVED_NUMBER_MAX) {
 }
 
 GAME_BUFFER[argument0] = extern_buffer_check2(_FILE_GAMESAVED + string_filling(string(argument0), "0", 3));
-if (buffer_exists(GAME_BUFFER[0])) { // Just load it.
- var __load = buffer_read(GAME_BUFFER[0], buffer_string);
+if (buffer_exists(GAME_BUFFER[argument0])) { // Just load it.
+ var __load = buffer_read(GAME_BUFFER[argument0], buffer_string);
  if (is_undefined(GAMESAVED[argument0]) || !ds_exists(GAMESAVED[argument0], ds_type_map))
   GAMESAVED[argument0] = ds_map_create();
 
